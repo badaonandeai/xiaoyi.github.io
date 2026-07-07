@@ -3,49 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>慧通居士 | 极简禅修</title>
-    <style>
-        *{margin:0;padding:0;box-sizing:border-box;font-family: "Noto Serif SC", serif;}
-        body{background:#f7f5f0;color:#2d2a24;line-height:1.9;}
-        .container{max-width:800px;margin:60px auto;padding:0 20px;}
-        header{text-align:center;margin-bottom:60px;}
-        h1{font-size:32px;font-weight:400;color:#5a4632;letter-spacing:4px;}
-        .subtitle{font-size:16px;color:#888;margin-top:8px;}
-        nav{text-align:center;margin-bottom:40px;}
-        nav a{margin:0 15px;text-decoration:none;color:#666;font-size:15px;}
-        nav a:hover{color:#5a4632;}
-        .article{margin-bottom:50px;}
-        .article h2{font-size:22px;color:#4a3a28;margin-bottom:12px;}
-        .article .date{color:#999;font-size:14px;margin-bottom:16px;}
-        .article p{text-indent:2em;margin-bottom:16px;}
-        footer{text-align:center;color:#999;padding:40px 0;border-top:1px solid #e6e2d9;margin-top:60px;}
-    </style>
+    <title>慧通 | 静修小筑</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>慧通居士</h1>
-            <p class="subtitle">俗家修行 · 静心随笔</p>
-        </header>
-        <nav>
-            <a href="#">首页</a>
-            <a href="#">随笔</a>
-            <a href="#">关于</a>
-        </nav>
-        <div class="article">
-            <h2>平常心即是道</h2>
-            <div class="date">2026-06-30</div>
-            <p>修行不在深山，而在日常。待人接物，不起嗔心，不生贪念，便是修行。</p>
-            <p>凡所有相，皆是虚妄。守住内心清净，便是自在。</p>
-        </div>
-        <div class="article">
-            <h2>读《金刚经》有感</h2>
-            <div class="date">2026-06-25</div>
-            <p>应无所住而生其心。心不执着于外境，方能得大自在。</p>
-        </div>
-        <footer>
-            <p>© 2026 慧通居士 · 个人修行小筑</p>
-        </footer>
-    </div>
+    <!-- 头部 -->
+    <header class="header">
+        <h1>慧通 静修小筑</h1>
+        <p>心无挂碍，无有恐怖</p>
+    </header>
+
+    <!-- 导航 -->
+    <nav class="nav">
+        <a href="#about">关于我</a>
+        <a href="#article">静心语录</a>
+        <a href="#practice">日常修行</a>
+        <a href="#contact">留言</a>
+    </nav>
+
+    <!-- 主容器 -->
+    <main class="container">
+        <!-- 个人介绍 -->
+        <section id="about" class="card">
+            <h2>关于居士</h2>
+            <p>法号慧通，平日静坐、读经、自省。
+            以平常心看待世间诸事，修清净心，行温和事。
+            常诵金刚经，体悟无住生心，缘起性空之理。</p>
+        </section>
+
+        <!-- 静心语录 -->
+        <section id="article" class="card">
+            <h2>静心语录</h2>
+            <div class="quote">
+                <p>凡所有相，皆是虚妄，若见诸相非相，即见如来。</p>
+                <small>——《金刚经》</small>
+            </div>
+            <div class="quote">
+                <p>应无所住而生其心。</p>
+                <small>——《金刚经》</small>
+            </div>
+            <div class="quote">
+                <p>一切有为法，如梦幻泡影，如露亦如电，应作如是观。</p>
+                <small>——《金刚经》</small>
+            </div>
+        </section>
+
+        <!-- 日常修行 -->
+        <section id="practice" class="card">
+            <h2>日常修行</h2>
+            <ul>
+                <li>每日静坐静心，敲木鱼收摄心神</li>
+                <li>诵读经文，抄写静心短句</li>
+                <li>少妄语，多自省，善待身边众生</li>
+                <li>简单素食，清心寡欲</li>
+            </ul>
+        </section>
+
+        <!-- 简易留言板（纯前端，刷新消失） -->
+        <section id="contact" class="card">
+            <h2>静心留言</h2>
+            <textarea id="msgInput" placeholder>写下你的感悟..."></textarea>
+            <button onclick="sendMsg">留下心语</button>
+            <div id="msgBox"></div>
+        </section>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <p>©2026 慧通静修小筑 | 心静则万物静</p>
+    </footer>
+
+    <script src="main.js"></script>
 </body>
 </html>
